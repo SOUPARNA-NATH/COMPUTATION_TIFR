@@ -31,6 +31,12 @@ frequency = 100*freq[:,0]   #Converting cm^(-1) to m^(-1)
 cmb_fl = np.loadtxt("/home/alnath/Desktop/PYTHON PROGRAM/CMBMonopole.txt")
 cmb_flux = 10**-20*cmb_fl[:,1]  #Converting MJy/sr to J/m^2
 
+peak_freq = c*100*(freq[:,0])[np.argmax(cmb_fl[:,1])]
+peak_wvlnth = c/peak_freq
+
+print("Peak frequency at",peak_freq,"Hz")
+print("Peak Wavelength at",peak_wvlnth,"m")
+
 f.close()
 
 #Designing Plot Window
