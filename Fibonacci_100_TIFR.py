@@ -9,4 +9,4 @@ Date:- 06.11.2019
 
 import Fiibonacci_TIFR as fib
 
-print(fib.FibonacciGenerate(20))
+print(fib.FibonacciGenerate(100))
