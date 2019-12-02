@@ -7,7 +7,7 @@ Date :- 02/12/2019
 
 #include "Array_Header_TIFR.h"
 
-int *ptr =  (int *)malloc(100*sizeof(int));
+int *ptr =  (int *)calloc(100,sizeof(int));
 
 int main()
 {
