@@ -11,6 +11,11 @@ int *ptr =  (int *)malloc(100*sizeof(int));
 
 int main()
 {
+  printf("The elements of the array before assigning value: \n");
+  for(int i = 0; i<100; i++){
+    printf("%d\n",ptr[i]);
+  }
+  
   for(int i = 0; i<100; i++){
   ptr[i] = (i+1)*(i+1);
   }
