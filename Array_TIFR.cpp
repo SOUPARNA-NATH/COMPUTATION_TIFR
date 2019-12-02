@@ -5,12 +5,9 @@ Author :- Souparna Nath
 Date :- 02/12/2019
 */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "Array_Header_TIFR.h"
 
 int *ptr =  (int *)malloc(100*sizeof(int));
-float *MuAndVar(int*,int);
-
 
 int main()
 {
@@ -23,19 +20,4 @@ int main()
 
   free(ptr);
   return 0;
-}
-
-float *MuAndVar(int *ref,int n)
-{
-  float *MuAndVar = (float *)malloc(2*sizeof(float));
-  float s1 = 0, s2 = 0;
-  for(int i=0; i<n; i++){
-    s1 += ref[i];
-    s2 += ref[i]*ref[i];
-  }
-  
-  MuAndVar[0] = s1/n;
-  MuAndVar[1] = s2/n - (s1/n)*(s1/n);
-
-  return MuAndVar;
 }
